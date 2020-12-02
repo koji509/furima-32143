@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-12-02T08:17:33.771Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="EFka7BaCaTu2pI8Q6n5T">
+<mxfile host="65bd71144e" modified="2020-12-02T08:56:47.070Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="FKkLkn-TjZNpue8sEQb9">
     <diagram id="uKljOXU6zLsh2HpS8qwm" name="ページ1">
         <mxGraphModel dx="607" dy="567" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -32,12 +32,12 @@
                     <mxGeometry y="26" width="324" height="142" as="geometry"/>
                 </mxCell>
                 <mxCell id="138" value="addresses テーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=0;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="468" y="336" width="324" height="132" as="geometry"/>
+                    <mxGeometry x="468" y="336" width="336" height="144" as="geometry"/>
                 </mxCell>
-                <mxCell id="139" value="postal_code       string           null: false&#10;prefectures_id    integer         null: false&#10;municipality        string           null: false&#10;house_number   string           null: false&#10;phone_number   string           null: false&#10;purchase            references   null: false   foreign_key: true" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="138">
-                    <mxGeometry y="26" width="324" height="106" as="geometry"/>
+                <mxCell id="139" value="postal_code          string           null: false&#10;prefectures_id       integer         null: false&#10;municipality           string           null: false&#10;house_number      string           null: false&#10;phone_number      string           null: false&#10;purchase               references    null: false   foreign_key: true&#10;building_number   string            null: false" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="138">
+                    <mxGeometry y="26" width="336" height="118" as="geometry"/>
                 </mxCell>
-                <mxCell id="154" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.214;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;" edge="1" parent="1" source="135" target="139">
+                <mxCell id="156" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.199;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;" edge="1" parent="1" source="135" target="139">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
