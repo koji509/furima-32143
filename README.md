@@ -37,15 +37,15 @@
 
 ## purchases テーブル
 
-| Column       | Type       | Options                        |
-| ------------ |----------- |------------------------------- |
-| postal_code  | string     | null: false                    |
-| prefectures  | string     | null: false                    |
-| municipality | string     | null: false                    |
-| house_number | integer    | null: false                    |
-| phone_number | integer    | null: false                    |
-| user         | references | null: false, foreign_key: true |
-| product      | references | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+| --------------- |----------- |------------------------------- |
+| postal_code     | string     | null: false                    |
+| prefectures_id  | string     | null: false                    |
+| municipality    | string     | null: false                    |
+| house_number    | integer    | null: false                    |
+| phone_number    | integer    | null: false                    |
+| user            | references | null: false, foreign_key: true |
+| product         | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
