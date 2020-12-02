@@ -23,11 +23,11 @@
 | ------------ | ---------- | ------------------------------ |
 | product_name | string     | null: false                    |
 | explanation  | text       | null: false                    |
-| category     | string     | null: false                    |
-| status       | string     | null: false                    |
-| delivery     | integer    | null: false                    |
-| area         | string     | null: false                    |
-| days         | date       | null: false                    |
+| category_id  | integer    | null: false                    |
+| status_id    | integer    | null: false                    |
+| delivery_id  | integer    | null: false                    |
+| area_id      | integer    | null: false                    |
+| days_id      | integer    | null: false                    |
 | price        | integer    | null: false                    |
 | user         | references | null: false, foreign_key: true |
 
