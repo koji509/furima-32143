@@ -6,16 +6,7 @@ describe User do
 
   describe 'ユーザー新規登録' do
     context '新規登録がうまくいくとき' do
-      it "nicknameとemail、passwordとpassword_confirmationが存在すれば登録できる" do
-        expect(@user).to be_valid
-      end
-      it "nicknameが6文字以下で登録できる" do
-        @user.nickname = "aaaaaa"
-        expect(@user).to be_valid
-      end
-      it "passwordが6文字以上であれば登録できる" do
-        @user.password = "000000"
-        @user.password_confirmation = "000000"
+      it "すべて正しいフォーマットで入力されていれば登録できる" do
         expect(@user).to be_valid
       end
     end
@@ -32,6 +23,11 @@ describe User do
       @user.valid?
       expect(@user.errors.full_messages).to include("Email can't be blank")    
     end
+    it "emailに@が含まれていない場合登録できない" do
+      @user.email = "testexample"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Email @ is not enough")
+    end
     it "重複したemailが存在する場合登録できない" do
       @user.save
       another_user = FactoryBot.build(:user)
@@ -45,8 +41,8 @@ describe User do
       expect(@user.errors.full_messages).to include("Password can't be blank")
     end
     it "passwordが5文字以下であれば登録できない" do
-      @user.password = "00000"
-      @user.password_confirmation = "00000"
+      @user.password = "aa000"
+      @user.password_confirmation = "aa000"
       @user.valid?
       expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
     end
