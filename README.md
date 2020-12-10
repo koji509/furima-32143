@@ -14,10 +14,10 @@
 | birthday             | date   | null: false               |
 
 ### Association
-- has_many :products
+- has_many :item
 - has_many :purchases
 
-## products テーブル
+## items テーブル
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
@@ -27,7 +27,7 @@
 | status_id    | integer    | null: false                    |
 | delivery_id  | integer    | null: false                    |
 | area_id      | integer    | null: false                    |
-| days_id      | integer    | null: false                    |
+| day_id       | integer    | null: false                    |
 | price        | integer    | null: false                    |
 | user         | references | null: false, foreign_key: true |
 
@@ -40,11 +40,11 @@
 | Column          | Type       | Options                        |
 | --------------- |----------- |------------------------------- |
 | user            | references | null: false, foreign_key: true |
-| product         | references | null: false, foreign_key: true |
+| item            | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
-- belongs_to :product
+- belongs_to :item
 - has_one :address
 
 ## addresses テーブル
