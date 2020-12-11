@@ -10,9 +10,8 @@ class Item < ApplicationRecord
     validates :status_id
     validates :delivery_id
     validates :area_id
+    validates :day_id
   end
-
-  validates :day_id,  numericality: { other_than: 1, message: "Select" }
 
   with_options presence: true, format: { with: /\A[0-9]+\z/, message: "Half-width number" }do
     validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999,  message: "Out of setting range" } 

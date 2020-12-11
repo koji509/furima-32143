@@ -62,7 +62,7 @@ describe Item do
         expect(@item.errors.full_messages).to include("Price Out of setting range")
       end
       it "priceが9999999円以上だと出品できない" do
-        @item.price = '9999999'
+        @item.price = '10000000'
         @item.valid?
         expect(@item.errors.full_messages).to include()
       end
@@ -70,6 +70,31 @@ describe Item do
         @item.image = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Image can't be blank")
+      end
+      it "category_idが1だと出品できない" do
+        @item.category_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Category Select")
+      end
+      it "status_idが1だと出品できない" do
+        @item.status_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Status Select")
+      end
+      it "delivery_idが1だと出品できない" do
+        @item.delivery_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Delivery Select")
+      end
+      it "area_idが1だと出品できない" do
+        @item.area_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Area Select")
+      end
+      it "day_idが1だと出品できない" do
+        @item.day_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Day Select")
       end
     end
   end
