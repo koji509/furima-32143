@@ -66,6 +66,11 @@ describe Item do
         @item.valid?
         expect(@item.errors.full_messages).to include()
       end
+      it "imageが空だと出品できない" do
+        @item.image = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Image can't be blank")
+      end
     end
   end
 end
