@@ -10,7 +10,7 @@ app/assets/stylesheets/items/new.css %>
     <%= form_with local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
+    <%#= render 'shared/error_messages', model: f.object %>
     <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
     <%# 出品画像 %>
@@ -52,7 +52,7 @@ app/assets/stylesheets/items/new.css %>
           カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:hoge, []:hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
         <div class="weight-bold-text">
           商品の状態
           <span class="indispensable">必須</span>
@@ -83,7 +83,7 @@ app/assets/stylesheets/items/new.css %>
           発送までの日数
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+        <%= f.collection_select(:hoge, [],, :hoge, :hoge, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
       </div>
     </div>
     <%# /配送について %>
@@ -141,7 +141,7 @@ app/assets/stylesheets/items/new.css %>
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "変更する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', "#", class:"back-btn" %>
+      <%=link_to 'もどる', hoge, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
   </div>
