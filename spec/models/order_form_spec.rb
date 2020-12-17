@@ -44,7 +44,7 @@ RSpec.describe OrderForm, type: :model do
         expect(@order.errors.full_messages).to include("Postal code Input correctly")
       end
       it "prefecture_idが1では購入できないこと" do
-        @order.prefecture_id = '1'
+        @order.prefecture_id = 1
         @order.valid?
         expect(@order.errors.full_messages).to include("Prefecture Select")
       end
@@ -85,6 +85,11 @@ RSpec.describe OrderForm, type: :model do
       end
       it "phone_numberが12桁以上では購入できないこと" do
         @order.phone_number = '090123456789'
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Phone number Input only number")
+      end
+      it "phone_numberが数字のみじゃないと購入できないこと" do
+        @order.phone_number = 'avb//@aefe1'
         @order.valid?
         expect(@order.errors.full_messages).to include("Phone number Input only number")
       end
