@@ -83,6 +83,11 @@ RSpec.describe OrderForm, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Item can't be blank")
       end
+      it "phone_numberが12桁以上では購入できないこと" do
+        @order.phone_number = '090123456789'
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Phone number Input only number")
+      end
     end
   end
 end
