@@ -8,6 +8,8 @@ class OrderForm
     validates :house_number
     validates :phone_number, format: { with: /\A0[0-9]{9,10}\z/, message: "Input only number" }
     validates :token
+    validates :user_id
+    validates :item_id
   end
 
   validates :prefecture_id, presence: true, numericality: { other_than: 1, message: "Select" }
